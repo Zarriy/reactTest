@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .button {
+    @apply text-4xl rounded-full bg-sky-200 w-20 h-20 hover:shadow-xl duration-100 ease-out active:scale-105;
+  }
+}
