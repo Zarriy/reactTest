@@ -70,7 +70,7 @@ export function MobileFilter() {
           {filters.map((filter, i) => (
             <li
               className={`cursor-pointer px-4 py-2 rounded-lg  hover:shadow-lg ${
-                selected === filter.toLowerCase() && "bg-blue-400"
+                selected === filter.toLowerCase() && "bg-blue-400 text-slate-50"
               }`}
               onClick={handleClick}
             >
