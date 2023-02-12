@@ -15,7 +15,9 @@ export default function Filters() {
       {filters.map((filter, i) => (
         <div
           key={i}
-          className={`px-6 py-4 bg-white rounded-xl hover:shadow-xl transition duration-200 cursor-pointer ease-out ${
+          className={`px-6 py-4 ${
+            selected !== filter.toLowerCase() && "bg-white"
+          } rounded-xl hover:shadow-xl transition duration-200 cursor-pointer ease-out ${
             selected === filter.toLowerCase() &&
             "bg-blue-400 text-slate-50 shadow-lg"
           }`}
