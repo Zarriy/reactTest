@@ -17,7 +17,7 @@ export default function Filters() {
           key={i}
           className={`px-6 py-4 bg-white rounded-xl hover:shadow-xl transition duration-200 cursor-pointer ease-out ${
             selected === filter.toLowerCase() &&
-            "bg-blue-400 shadow-xl text-slate-50"
+            "bg-blue-400 text-slate-50 shadow-lg"
           }`}
           onClick={handleFilterChange}
         >
@@ -45,11 +45,6 @@ export function MobileFilter() {
     return () => document.removeEventListener("click", outsideClickHandler);
   }, [filterRef]);
 
-  const handleClick = (e) => {
-    handleFilterChange(e);
-    setShow(false);
-  };
-
   return (
     <div className="flex items-center gap-2 relative" ref={filterRef}>
       Filter:
@@ -72,7 +67,7 @@ export function MobileFilter() {
               className={`cursor-pointer px-4 py-2 rounded-lg  hover:shadow-lg ${
                 selected === filter.toLowerCase() && "bg-blue-400 text-slate-50"
               }`}
-              onClick={handleClick}
+              onClick={handleFilterChange}
             >
               {filter}
             </li>
